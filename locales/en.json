@@ -1,0 +1,7 @@
+{
+    "hello": "Hello World",
+    "login": {
+      "title": "Login",
+      "button": "Sign In"
+    }
+  }
