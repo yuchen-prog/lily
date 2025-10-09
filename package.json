@@ -1,8 +1,8 @@
 {
-  "name": "electron-demo",
-  "productName": "electron-demo",
+  "name": "lily",
+  "productName": "lily",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "A simple, beautiful and efficient desktop AI chat software.",
   "main": ".vite/build/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -12,8 +12,8 @@
   },
   "keywords": [],
   "author": {
-    "name": "EricWXY",
-    "email": "ericwxy@foxmail.com"
+    "name": "yuchen",
+    "email": "y30160361@foxmail.com"
   },
   "license": "MIT",
   "devDependencies": {
