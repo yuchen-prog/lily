@@ -32,5 +32,5 @@ import App from './App.vue';
 import i18n from './i18n';
 
 createApp(App).
-    use(await i18n).
+    use(i18n).
     mount('#app');

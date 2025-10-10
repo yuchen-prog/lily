@@ -16,5 +16,5 @@ async function createI18nInstance() {
     return i18n
 }
 
-export const i18n = createI18nInstance()
+export const i18n = await createI18nInstance()
 export default i18n

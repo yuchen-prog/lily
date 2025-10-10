@@ -33,13 +33,13 @@
 	},
 	"include": [
 		"forge.env.d.ts",
-		"src/**/*.ts",
-		"src/**/*.tsx",
-		"src/**/*.vue",
-		"src/**/*.d.ts", 
 		"renderer/App.vue", 
 		"preload.ts", 
-		"main/main.ts",
-		"renderer/renderer.ts"	
+		"main/*.ts",
+		"renderer/*.ts",
+		"renderer/components/*.vue",
+		"renderer/*/*.ts",
+		"common/*.ts",
+
 	]
 }
