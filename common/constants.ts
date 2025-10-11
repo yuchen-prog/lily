@@ -5,6 +5,12 @@ export enum IPC_EVENTS {
     WINDOW_MAX = 'window-max',
     WINDOW_CLOSE = 'window-close',
     IS_WINDOW_MAX = 'is-window-max',
+
+    // log相关行为
+    LOG_INFO = 'log-info',
+    LOG_WARN = 'log-warn',
+    LOG_ERROR = 'log-error',
+    LOG_DEBUG = 'log-debug',
 }
 
 export enum WINDOW_NAMES {

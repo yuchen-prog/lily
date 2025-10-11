@@ -36,6 +36,7 @@
 		"renderer/App.vue", 
 		"preload.ts", 
 		"main/*.ts",
+		"main/*/*.ts",
 		"renderer/*.ts",
 		"renderer/components/*.vue",
 		"renderer/*/*.ts",

@@ -10,6 +10,12 @@ const api: WindowApi = {
         ipcRenderer.on('window-is-maximized', (_event, isMaximized) => {
             callback(isMaximized)
         })
+    },
+    logger: {
+        debug: (message: string, ...meta: any[]) => ipcRenderer.send(IPC_EVENTS.LOG_DEBUG, message, ...meta),
+        info: (message: string, ...meta: any[]) => ipcRenderer.send(IPC_EVENTS.LOG_INFO, message, ...meta),
+        warn: (message: string, ...meta: any[]) => ipcRenderer.send(IPC_EVENTS.LOG_WARN, message, ...meta),
+        error: (message: string, ...meta: any[]) => ipcRenderer.send(IPC_EVENTS.LOG_ERROR, message, ...meta),
     }
 }
 

@@ -4,6 +4,7 @@
 import { BrowserWindow, BrowserWindowConstructorOptions, IpcMainEvent, IpcMainInvokeEvent, app, ipcMain, screen } from 'electron';
 import path from 'path';
 import { IPC_EVENTS } from '../../common/constants';
+import { logManager } from './logService';
 
 interface ISizeOption {
     width: number;
@@ -34,6 +35,7 @@ class WindowService {
 
     constructor() {
         this._setupIpcEvents();
+        logManager.info('WindowService initialized');
     }
 
     private _setupIpcEvents() {
