@@ -1,7 +1,7 @@
 
 // 将窗口管理相关行为抽离出来
 
-import { BrowserWindow, BrowserWindowConstructorOptions, IpcMainEvent, IpcMainInvokeEvent, app, ipcMain, screen } from 'electron';
+import { BrowserWindow, BrowserWindowConstructorOptions, IpcMainEvent, IpcMainInvokeEvent, app, ipcMain, nativeTheme, screen } from 'electron';
 import path from 'path';
 import { IPC_EVENTS } from '../../common/constants';
 import { logManager } from './logService';
@@ -18,6 +18,8 @@ interface ISizeOption {
 const WINDOW_OPTIONS = {
     titleBarStyle: 'hidden',
     tite: 'Lily',
+    darkTheme: nativeTheme.shouldUseDarkColors,
+    backgroundColor: nativeTheme.shouldUseDarkColors ? '#2C2C2C' : '#ffffff',
     webPreferences: {
         preload: path.join(__dirname, 'preload.js'),
         contextIsolation: true, // 出于安全考虑，默认启用上下文隔离

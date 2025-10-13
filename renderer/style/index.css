@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./theme/index.css";
 
 
 body {
@@ -7,6 +8,12 @@ body {
   font-size: 16px;
   line-height: 1.6;
 }
+
+#app {
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-secondary);
+  }
 
 .no-drag {
   -webkit-app-region: no-drag;
