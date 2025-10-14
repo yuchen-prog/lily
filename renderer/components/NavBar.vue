@@ -8,10 +8,7 @@
         </li>
         </ul>
         <ul>
-            <li class="sidebar-item no-drag cursor-pointer hover:text-primary-subtle">
-            <!-- <theme-switcher /> -->
-            <iconify-icon icon="material-symbols:dark-mode-outline" width="24" height="24" />
-            </li>
+            <theme-switcher></theme-switcher>
             <li class="sidebar-item no-drag cursor-pointer hover:text-primary-subtle">
             <iconify-icon icon="material-symbols:settings-outline" width="24" height="24" />
             </li>
@@ -27,6 +24,7 @@
 import {} from "vue"
 import { Icon as iconifyIcon } from "@iconify/vue"
 import DragRegion from "./DragRegion.vue"
+import ThemeSwitcher from "./ThemeSwitcher.vue"
 
 defineOptions({
   name: "NavBar",

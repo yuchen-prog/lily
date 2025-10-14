@@ -5,6 +5,7 @@ import { BrowserWindow, BrowserWindowConstructorOptions, IpcMainEvent, IpcMainIn
 import path from 'path';
 import { IPC_EVENTS } from '../../common/constants';
 import { logManager } from './logService';
+import { themeManager } from './themeService';
 
 interface ISizeOption {
     width: number;
@@ -15,11 +16,13 @@ interface ISizeOption {
     minHeight?: number;
 }
 
+// nativeTheme.themeSource = 'dark';
+
 const WINDOW_OPTIONS = {
     titleBarStyle: 'hidden',
     tite: 'Lily',
-    darkTheme: nativeTheme.shouldUseDarkColors,
-    backgroundColor: nativeTheme.shouldUseDarkColors ? '#2C2C2C' : '#ffffff',
+    darkTheme: themeManager.isDarkMode,
+    backgroundColor: themeManager.isDarkMode ? '#2C2C2C' : '#ffffff',
     webPreferences: {
         preload: path.join(__dirname, 'preload.js'),
         contextIsolation: true, // 出于安全考虑，默认启用上下文隔离

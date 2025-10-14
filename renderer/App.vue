@@ -19,12 +19,12 @@ onMounted(() => {
     <aside class="sidebar h-full flex flex-shrink-0 flex-col w-[200px]">
       <div class="flex-auto flex">
         <nav-bar />
-        <div class="flex-auto">
+        <div class="flex-auto text-tx-primary">
           conversation list
         </div>
       </div>
     </aside>
-    <div class="flex-auto">
+    <div class="flex-auto text-tx-primary">
       <title-bar /> 
       Main
     </div>

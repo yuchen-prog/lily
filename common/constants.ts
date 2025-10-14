@@ -11,6 +11,12 @@ export enum IPC_EVENTS {
     LOG_WARN = 'log-warn',
     LOG_ERROR = 'log-error',
     LOG_DEBUG = 'log-debug',
+
+    // 主题相关行为
+    THEME_GET = 'theme-get',
+    THEME_SET = 'theme-set',
+    IS_DARK_MODE = 'is-dark-mode',
+    THEME_MODE_UPDATED = 'theme-mode-updated',
 }
 
 export enum WINDOW_NAMES {
