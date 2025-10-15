@@ -3,5 +3,25 @@
     "login": {
       "title": "登录",
       "button": "立即登录"
+    },
+    "window": {
+      "minimize": "最小化",
+      "maximize": "最大化",
+      "restore": "还原",
+      "close": "关闭"
+    },
+    "settings": {
+      "title": "设置",
+      "language": "语言",
+      "theme": "主题",
+      "notifications": "通知"
+    },
+    "main": {
+      "sidebar": {
+        "conversations": "对话",
+        "dark": "切换黑暗模式",
+        "light": "切换明亮模式",
+        "settings": "设置"
+      }
     }
-  }
+}

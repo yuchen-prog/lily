@@ -3,5 +3,25 @@
     "login": {
       "title": "Login",
       "button": "Sign In"
+    },
+    "window": {
+      "minimize": "Minimize",
+      "maximize": "Maximize",
+      "restore": "Restore",
+      "close": "Close"
+    },
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "theme": "Theme",
+      "notifications": "Notifications"
+    },
+    "main": {
+      "sidebar": {
+        "conversations": "Conversations",
+        "dark": "Switch Dark Mode",
+        "light": "Switch Light Mode",
+        "settings": "Settings"
+      }
     }
   }

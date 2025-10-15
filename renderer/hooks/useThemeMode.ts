@@ -9,6 +9,8 @@ const themeIconMap = new Map<ThemeMode, string>([
 export function useThemeMode() {
     const isDark = ref<boolean>(false);
     const themeMode = ref<ThemeMode>('dark')
+
+    const { t } = useI18n();
    
     onMounted(async () => {
         await nextTick();
@@ -28,11 +30,16 @@ export function useThemeMode() {
         window.api.setTheme(newTheme);
     }
 
+    const themeTooltip = computed(() => {
+        return isDark.value ? t("main.sidebar.light") : t("main.sidebar.dark");
+    })
+
     const themeIcon = computed(() => themeIconMap.get(themeMode.value) || 'material-symbols:auto-awesome-outline');
 
     return {
         isDark,
         toggleTheme,
         themeIcon,
+        themeTooltip,
     }
 }
