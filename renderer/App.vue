@@ -2,21 +2,13 @@
 import TitleBar from '@renderer/components/TitleBar.vue'
 import { NConfigProvider } from 'naive-ui'
 import NavBar from '@renderer/components/NavBar.vue'
+import ResizeDivider from '@renderer/components/ResizeDivider.vue'
 
-// 模拟一个error
-
-onMounted(() => {
-
-  // try {
-  //   throw new Error('模拟一个错误')
-  // } catch (error) {
-  //   console.error('捕获到错误', error)
-  // }
-})
+const sideBarWidth = ref(320)
 </script>
 <template>
 <n-config-provider class="h-[100vh] w-[100vw] flex">
-    <aside class="sidebar h-full flex flex-shrink-0 flex-col w-[200px]">
+    <aside class="sidebar h-full flex flex-shrink-0 flex-col" :style="{width: `${sideBarWidth}px`}">
       <div class="flex-auto flex">
         <nav-bar />
         <div class="flex-auto text-tx-primary">
@@ -24,6 +16,12 @@ onMounted(() => {
         </div>
       </div>
     </aside>
+    <resize-divider 
+      orientation="vertical" 
+      :minMargin="200" 
+      :maxMargin="500"
+      v-model:margin="sideBarWidth"
+    />
     <div class="flex-auto text-tx-primary">
       <title-bar /> 
       Main
