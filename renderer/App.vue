@@ -12,7 +12,7 @@ const sideBarWidth = ref(320)
       <div class="flex-auto flex">
         <nav-bar />
         <div class="flex-auto text-tx-primary">
-          conversation list
+          EPITOM
         </div>
       </div>
     </aside>
