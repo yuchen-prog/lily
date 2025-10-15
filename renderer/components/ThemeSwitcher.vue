@@ -8,9 +8,7 @@
 
 <script setup lang="ts">
 import {} from "vue"
-import { Icon as iconifyIcon } from "@iconify/vue"
 import { useThemeMode } from "@renderer/hooks/useThemeMode";
-import NativeTooltip from "./NativeTooltip.vue";
 
 const { themeIcon, toggleTheme, themeTooltip } = useThemeMode()
 </script>

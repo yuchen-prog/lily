@@ -32,8 +32,11 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import i18n from './i18n';
 import errorHandler from './plugins/errorHander';
+import { componentsPlugin } from './plugins/components';
 
-createApp(App).
-    use(i18n).
-    use(errorHandler).
-    mount('#app');
+const app = createApp(App);
+
+app.use(i18n)
+    .use(errorHandler)
+    .use(componentsPlugin)
+    .mount('#app');

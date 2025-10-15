@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { Icon as IconifyIcon } from '@iconify/vue';
 import { useWinManager } from '@renderer/hooks/useWinManager';
-import DragRegion from '@renderer/components/DragRegion.vue'
-import NativeTooltip from './NativeTooltip.vue';
 
 interface TitleBarProps {
   title?: string;
@@ -49,7 +46,6 @@ const { t } = useI18n();
           <iconify-icon icon="material-symbols:chrome-minimize-sharp" :width="btnSize" :height="btnSize" />
         </button>
       </native-tooltip>
-      
 
       <native-tooltip :content='isMaximized ? t("window.restore") : t("window.maximize")'>
         <button v-show="isMaximizable" class="title-bar-button cursor-pointer hover:bg-input" @click="maximize">

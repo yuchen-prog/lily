@@ -25,10 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { Icon as iconifyIcon } from "@iconify/vue"
-import DragRegion from "./DragRegion.vue"
 import ThemeSwitcher from "./ThemeSwitcher.vue"
-import NativeTooltip from "./NativeTooltip.vue"
 
 defineOptions({
   name: "NavBar",
