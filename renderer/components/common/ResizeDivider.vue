@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<IProps>(), {
   orientation: 'vertical',
   margin: 320,
   minMargin: 200,
-  maxMargin: 500,
+  maxMargin: 800,
 })
 
 const emit = defineEmits<{

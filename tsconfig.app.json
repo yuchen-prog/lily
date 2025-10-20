@@ -39,8 +39,9 @@
 		"main/*/*.ts",
 		"renderer/*.ts",
 		"renderer/components/*.vue",
+		"renderer/components/*/*.vue",
 		"renderer/*/*.ts",
-		"common/*.ts",
+		"common/*.ts", "renderer/components/common/DragRegion.vue", "renderer/components/common/NativeTooltip.vue", "renderer/components/common/ResizeDivider.vue",
 
 	]
 }

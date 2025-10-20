@@ -2,10 +2,10 @@
 import { type Plugin } from 'vue'
 
 // 引入需要注册的全局组件
-import DragRegion from "@renderer/components/DragRegion.vue";
+import DragRegion from "@renderer/components/common/DragRegion.vue";
 import TitleBar from "@renderer/components/TitleBar.vue";
 import { Icon as iconifyIcon } from "@iconify/vue"
-import NativeTooltip from '@renderer/components/NativeTooltip.vue';
+import NativeTooltip from '@renderer/components/common/NativeTooltip.vue';
 
 export const componentsPlugin: Plugin = {
     install(app) {

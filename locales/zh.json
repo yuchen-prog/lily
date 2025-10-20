@@ -19,6 +19,7 @@
     "main": {
       "sidebar": {
         "conversations": "对话",
+        "users": "用户",
         "dark": "切换黑暗模式",
         "light": "切换明亮模式",
         "settings": "设置"

@@ -19,6 +19,7 @@
     "main": {
       "sidebar": {
         "conversations": "Conversations",
+        "users": "Users",
         "dark": "Switch Dark Mode",
         "light": "Switch Light Mode",
         "settings": "Settings"

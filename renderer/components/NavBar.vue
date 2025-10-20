@@ -4,8 +4,8 @@
         <nav class="h-[calc(100%-1.4rem)] flex flex-col px-4 py-2 mt-[.7rem] mb-[.7rem] border-r border-r-input text-tx-secondary">
             <ul class="flex-auto">
         <li class="sidebar-item no-drag cursor-pointer hover:text-primary-hover text-tx-primary">
-            <native-tooltip :content='t("main.sidebar.conversations")'>
-                <iconify-icon icon="material-symbols:chat-outline" width="24" height="24" />
+            <native-tooltip :content='t("main.sidebar.users")'>
+                <iconify-icon icon="material-symbols:user-attributes-rounded" width="24" height="24" />
             </native-tooltip>
         </li>
         </ul>
