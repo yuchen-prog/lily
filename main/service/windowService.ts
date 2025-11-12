@@ -1,7 +1,7 @@
 
 // 将窗口管理相关行为抽离出来
 
-import { BrowserWindow, BrowserWindowConstructorOptions, IpcMainEvent, IpcMainInvokeEvent, app, ipcMain, nativeTheme, screen } from 'electron';
+import { BrowserWindow, BrowserWindowConstructorOptions, IpcMainEvent, IpcMainInvokeEvent, app, ipcMain, nativeTheme, screen, session } from 'electron';
 import path from 'path';
 import { IPC_EVENTS } from '../../common/constants';
 import { logManager } from './logService';
@@ -26,6 +26,7 @@ const WINDOW_OPTIONS = {
     webPreferences: {
         preload: path.join(__dirname, 'preload.js'),
         contextIsolation: true, // 出于安全考虑，默认启用上下文隔离
+        // webSecurity: false, // 启用网络安全
         nodeIntegration: false, // 出于安全考虑，默认禁用 Node.js 集成
         devTools: true, // 是否启用开发者工具
         enableRemoteModule: false, // 出于安全考虑，默认禁用远程模块
@@ -88,6 +89,17 @@ class WindowService {
     }
 
     public createWindow(sizeOption: ISizeOption, additionalOptions?: BrowserWindowConstructorOptions) {
+        // const filter = { urls: ['*://*/*'] } // 或者更具体的 URL 匹配
+        // session.defaultSession.webRequest.onHeadersReceived(filter, (details, callback) => {
+        //   // 读取并修改现有 CSP（如果有），或直接设置一个允许 blob 的 CSP
+        //   const headers = details.responseHeaders || {}
+        //   // 新增或覆盖 Content-Security-Policy
+        //   headers['Content-Security-Policy'] = [
+        //     "default-src 'self' blob: data:; script-src 'self' 'unsafe-eval' blob:; worker-src 'self' blob:;"
+        //   ]
+        //   callback({ responseHeaders: headers })
+        // })
+
         const options = {
             ...WINDOW_OPTIONS,
             ...sizeOption,
